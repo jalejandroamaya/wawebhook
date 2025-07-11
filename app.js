@@ -19,6 +19,7 @@ app.get('/', (req, res) => {
     console.log('WEBHOOK VERIFIED');
     res.status(200).send(challenge);
   } else {
+    console.log('invalid request to webhook');
     res.status(403).end();
   }
 });
