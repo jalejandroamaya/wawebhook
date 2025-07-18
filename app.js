@@ -30,6 +30,8 @@ app.post('/', (req, res) => {
   console.log(`\n\nWebhook received ${timestamp}\n`);
   console.log(`Signature: ${req.headers['x-hub-signature-256']}`)
   console.log(JSON.stringify(req.body, null, 2));
+  console.log(req.headers['Content-Type'])
+  console.log(req.body)
   res.status(200).end();
 });
 
